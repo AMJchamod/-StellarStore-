@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Guide</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border: 1px solid #0f0;
+            border-radius: 10px;
+            background-color: #111;
+        }
+
+        h1, h2 {
+            color: #0f0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        ul ul {
+            padding-left: 20px;
+        }
+
+        li::before {
+            content: '>';
+            color: #0f0;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LocalStorage Guide</h1>
+        <p>LocalStorage is a part of the Web Storage API.</p>
+        <p>It allows you to store data in the form of key-value pairs in the user's browser.</p>
+        <p>Data stored in LocalStorage persists even after the browser is closed and reopened.</p>
+        <p>It has a storage limit of around 5MB per domain (this can vary slightly between browsers).</p>
+        
+        <h2>Basic Operations</h2>
+        
+        <ol>
+            <li>Storing Data</li>
+            <pre><code>localStorage.setItem('key', 'value');</code></pre>
+            <p>For example, to store a username:</p>
+            <pre><code>localStorage.setItem('username', 'JohnDoe');</code></pre>
+            
+            <li>Retrieving Data</li>
+            <pre><code>const value = localStorage.getItem('key');</code></pre>
+            <p>For example, to retrieve the stored username:</p>
+            <pre><code>const username = localStorage.getItem('username');</code></pre>
+            
+            <li>Removing Data</li>
+            <pre><code>localStorage.removeItem('key');</code></pre>
+            <p>For example, to remove the stored username:</p>
+            <pre><code>localStorage.removeItem('username');</code></pre>
+            
+            <li>Clearing All Data</li>
+            <pre><code>localStorage.clear();</code></pre>
+        </ol>
+    </div>
+</body>
+</html>
+
+

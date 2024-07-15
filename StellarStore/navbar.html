@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Page</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- mdb css-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylee.css">
+  <style>
+    .customnav {
+      background-color: #343a40;
+    }
+    .logoname {
+      display: inline;
+    }
+    #usernameDisplay {
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top customnav">
+    <div class="container-fluid cnav">
+      <a class="navbar-brand" href="#">
+        <img src="img/wp5698675-smoking-anime-wallpapers.jpg" alt="Logo" height="40">
+        <h4 class="logoname neon-text">StellarStore</h4>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><span style="color: aliceblue;">MENU</span></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Courses
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="ITDEPLOMA.html">IT DEPLOMA PROGRAMS</a></li>
+                <li><a class="dropdown-item" href="Manegmentdeploma.html">MANEGMENT DEPLOMA PROGRAMS</a></li>
+                <li><a class="dropdown-item" href="languages.html">LANGUAGE DEPLOMA PROGRAMS</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-outline-primary btn-custom">Login</button>
+          <span id="usernameDisplay" class="text-light ms-3"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script src="custom.js"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
