@@ -4,21 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navbar Page</title>
+  <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-  <!-- mdb css-->
+  <!-- MDB CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="stylee.css">
+  <!-- Custom CSS -->
   <style>
     .customnav {
-      background-color: #343a40;
+      background-color: black;
     }
     .logoname {
       display: inline;
     }
-    #usernameDisplay {
-      font-size: 1rem;
-      font-weight: bold;
-      color: white;
+    .neon-text {
+      color: red !important;
+      text-shadow: 0 0 10px red; /* Optional: Add a text shadow for neon effect */
+    }
+    .neon-text:hover {
+      color: orange !important; /* Optional: Change color on hover */
+    }
+    .search-form {
+      margin-left: auto;
+    }
+    .search-form input[type="search"] {
+      width: 200px; /* Adjust width as needed */
     }
   </style>
 </head>
@@ -41,34 +50,35 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active neon-text" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Courses
+              <a class="nav-link dropdown-toggle neon-text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categories
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="ITDEPLOMA.html">IT DEPLOMA PROGRAMS</a></li>
-                <li><a class="dropdown-item" href="Manegmentdeploma.html">MANEGMENT DEPLOMA PROGRAMS</a></li>
-                <li><a class="dropdown-item" href="languages.html">LANGUAGE DEPLOMA PROGRAMS</a></li>
+                <li><a class="dropdown-item" href="ITDEPLOMA.html">Drugs</a></li>
+                <li><a class="dropdown-item" href="Manegmentdeploma.html">Guns</a></li>
+                <li><a class="dropdown-item" href="languages.html">Hacking Tools</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
+            <!-- Search form -->
+            <form class="search-form d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-danger" type="submit">Search</button>
+            </form>
+            <!-- Username display -->
+            <span id="usernameDisplay" class="text-light ms-3"></span>
           </ul>
-          <button type="button" class="btn btn-outline-primary btn-custom">Login</button>
-          <span id="usernameDisplay" class="text-light ms-3"></span>
         </div>
       </div>
     </div>
   </nav>
-
-  <script src="custom.js"></script>
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+   <script src="custom.js"></script>
+  <!-- Bootstrap and MDB JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
 </body>
 </html>
