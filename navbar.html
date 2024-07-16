@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- MDB CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .customnav {
+      background-color:#2B2B2B;
+    }
+    .logoname {
+      display: inline;
+    }
+    .neon-text {
+      color: red !important;
+      text-shadow: 0 0 10px red; /* Optional: Add a text shadow for neon effect */
+    }
+    .neon-text:hover {
+      color: orange !important; /* Optional: Change color on hover */
+    }
+    .search-form {
+      margin-left: auto;
+    }
+    .search-form input[type="search"] {
+      width: 200px; /* Adjust width as needed */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top customnav">
+    <div class="container-fluid cnav">
+      <a class="navbar-brand" href="#">
+        <img src="img/wp5698675-smoking-anime-wallpapers.jpg" alt="Logo" height="40">
+        <h4 class="logoname neon-text">StellarStore</h4>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><span style="color: aliceblue;">MENU</span></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active neon-text" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle neon-text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categories
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="ITDEPLOMA.html">Drugs</a></li>
+                <li><a class="dropdown-item" href="Manegmentdeploma.html">Guns</a></li>
+                <li><a class="dropdown-item" href="languages.html">Hacking Tools</a></li>
+              </ul>
+            </li>
+            <!-- Search form -->
+            <form class="search-form d-flex justify-content-center">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-danger " type="submit">Search</button>
+            </form>
+            <!-- Username display -->
+            <span id="usernameDisplay" class="text-light ms-5"></span>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+   <script src="custom.js"></script>
+  <!-- Bootstrap and MDB JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+</body>
+</html>

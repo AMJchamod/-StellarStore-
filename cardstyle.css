@@ -1,0 +1,113 @@
+
+body{
+  background-image: url(img/gifimage.gif);
+  width:auto;
+  background-repeat: none;
+  background-size: cover;
+}
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+/*footer logo*/
+.footerlogo{
+  height: 40vh;
+  width: 40vh;
+}
+/*about us card image*/
+.custom-card-img {
+  height: 400px; /* Adjust the height as per your requirement */
+  object-fit: cover; /* Ensures the image covers the entire space without stretching */
+}
+.custmsection {
+  margin-bottom: 200px; /* Adjust this value as needed */
+}
+.mordetaisfooter{
+  margin-bottom: 2000px;
+}
+.mtc{
+    margin-top: 10%;
+}
+/*paggination*/
+.page-link {
+  padding: 8px 12px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #fff; /* White text color */
+  border: 2px solid #4CAF50; /* Green border */
+  border-radius: 5px;
+}
+.page-link:hover {
+  background-color: #4CAF50; /* Green background on hover */
+}
+
+.page-link.active {
+  background-color: #4CAF50; /* Active page background */
+}
+
+.page-number {
+  color: #fff; /* White text color for page numbers */
+}
+
+.paginationcustom {
+  margin-top: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.page-link {
+  padding: 8px 12px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #fff; /* White text color */
+  border: 2px solid #4CAF50; /* Green border */
+  border-radius: 5px;
+  background-color: #333; /* Dark background color */
+}
+
+.page-link:hover {
+  background-color: #4CAF50; /* Green background on hover */
+}
+
+.page-link.active {
+  background-color: #4CAF50; /* Active page background */
+}
+
+.page-number {
+  color: #fff; /* White text color for page numbers */
+}
+
+/*footer*/
+  /* Custom styles specific to the footer */
+  .footer {
+    background-color: #333; /* Dark background color */
+    text-align: center; /* Center align text */
+    padding: 20px 0; /* Padding top and bottom */
+  }
+
+  .footer-logo {
+    display: inline-block;
+    width: 120px; /* Adjust size as needed */
+    height: 120px; /* Adjust size as needed */
+    border: 4px solid #4CAF50; /* Green border */
+    border-radius: 50%; /* Circular border */
+    overflow: hidden; /* Ensure logo stays within circle */
+  }
+
+  .footer-logo img {
+    width: 100%; /* Make sure the logo fills the circle */
+    height: auto; /* Maintain aspect ratio */
+  }
