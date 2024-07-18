@@ -17,9 +17,9 @@
   <!-- Container for navbar -->
   <div id="navbarContainer"></div>
   <!-- Container for function bar -->
-   <div class="cfun">
-  <div id="functionContainer"></div>
-   </div>
+  <div class="cfun">
+    <div id="functionContainer"></div>
+  </div>
   <!-- Main content section -->
   <section class="custmsection mtc">
     <div class="container mt-4">
@@ -127,17 +127,7 @@
         </div>
       </div>
 
-      <!-- Pagination -->
-      <div class="paginationcustom">
-        <div class="pagination d-flex justify-content-center ">
-          <a href="#" class="page-link">&laquo;</a>
-          <a href="#" class="page-link active">1</a>
-          <a href="#" class="page-link">2</a>
-          <a href="#" class="page-link">3</a>
-          <a href="#" class="page-link">&raquo;</a>
-        </div>
-      </div>
-
+      <div id="paginationcontainer"></div>
     </div> <!-- End container -->
   </section> <!-- End section.custmsection -->
 
@@ -150,7 +140,10 @@
 
   <!-- Load navbar and function bar using JavaScript -->
   <script src="custom.js"></script>
-  
+  <script src="injector.js"></script>
+  <!--this file contain the funtionbar function it will not work inside custom.js check it after the implementation-->
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

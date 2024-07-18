@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+ 
  //Directly inject navbar  becourse  generic injection function cant to display username  correct
   fetch('navbar.html')
   .then(response => response.text())
@@ -31,4 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   injectHTML('pagination.html' , 'paginationcontainer');
   // Inject function bar
   injectHTML('functionbar.html', 'functionContainer');
+
+
 });
