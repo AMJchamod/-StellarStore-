@@ -1,28 +1,34 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Fetch and insert navbar.html content
+document.addEventListener('DOMContentLoaded', () => {
+ //Directly inject navbar  becourse  generic injection function cant to display username  correct
   fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbarContainer').innerHTML = data;
-      //Fetch and insert cards.html content
-      // Handle username display if needed
-      const username = localStorage.getItem('username');
-      if (username) {
-        document.getElementById('usernameDisplay').textContent = `Welcome, ${username}`;
-      }
-    })
-    .catch(error => {
-      console.error('Error fetching navbar:', error);
-    });
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('navbarContainer').innerHTML = data;
+    // After injecting navbar, execute script to display username
+    const usernameDisplay = document.getElementById('usernameDisplay');
+    const username = localStorage.getItem('username');
+    if (username) {
+      usernameDisplay.textContent = `Welcome, ${username}`;
+    }
+  })
+  .catch(error => {
+    console.error('Error fetching or injecting navbar:', error);
+  });
+  // Function to fetch and inject HTML content
+  const injectHTML = (url, containerId) => {
+    fetch(url)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById(containerId).innerHTML = data;
+       
+      })
+      .catch(error => {
+        console.error(`Error fetching ${url}:`, error);
+      });
+  };
 
-
-
-
-
-
-      // Select the container where you want to inject the cards
-      const cardContainer = document.getElementById('cardContainer');
-
-      // Fetch the HTML content of your card component file
-      
+  // Inject navbar
+  injectHTML('pagination.html' , 'paginationcontainer');
+  // Inject function bar
+  injectHTML('functionbar.html', 'functionContainer');
 });

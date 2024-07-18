@@ -111,3 +111,20 @@ body{
     width: 100%; /* Make sure the logo fills the circle */
     height: auto; /* Maintain aspect ratio */
   }
+  .cfun{
+    position: relative;
+    margin-top: 60px;
+  }
+  /* cardstyle.css */
+.navbar {
+ 
+  color:white;/* Transparent background with some opacity */
+}
+
+.dropdown-menu {
+  min-width: 10rem; /* Adjust dropdown menu width as needed */
+}
+
+.form-check-inline {
+  margin-left: 1rem; /* Add margin between radio buttons */
+}
