@@ -50,5 +50,6 @@ function navigateToPage(filterType) {
   
     // Inject the function bar
     injectHTML('functionbar.html', 'functionContainer');
+    injectHTML('pagination.html', 'paginationcontainer');
   });
   

@@ -28,42 +28,37 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   };
 
-  // Inject navbar
+  
   injectHTML('pagination.html' , 'paginationcontainer');
   // Inject function bar
   injectHTML('functionbar.html', 'functionContainer');
 
+// Function to handle search
+const handleSearch = () => {
+  const searchInput = document.getElementById('search').value.trim().toLowerCase();
+  
+  // Example switch case for navigation based on search input
+  switch(searchInput) {
+    case 'login':
+      window.location.href = 'loginpage.html';
+      break;
+    case 'item2':
+      window.location.href = 'item2.html';
+      break;
+    // Add more cases for other items/pages as needed
+    default:
+      alert('No matching item found.');
+      break;
+  }
+};
+
+// Event listener for search form submission
+const searchForm = document.querySelector('.search-form');
+searchForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission
+  handleSearch(); // Call handleSearch function
+});
 
 });
 //Search funtion
-
-
-    // Function to handle form submission
-    function search() {
-      // Prevent default form submission
-      event.preventDefault();
-
-      // Get the search input value
-      var searchQuery = document.getElementById("search").value.toLowerCase().trim();
-
-      // Switch statement to navigate based on search query
-      switch (searchQuery) {
-          case "page":
-              window.location.href = "index.html";
-              break;
-          case "page2":
-              window.location.href = "page2.html";
-              break;
-          case "page3":
-              window.location.href = "page3.html";
-              break;
-          default:
-              // Redirect to a default page or display a message if no match found
-              alert("No matching page found for '" + searchQuery + "'");
-              break;
-      }
-  }
-
-  // Event listener for form submission
-  document.getElementById("searchForm").addEventListener("submit", search);
 

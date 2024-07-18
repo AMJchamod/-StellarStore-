@@ -1,30 +1,16 @@
+ // Function to inject the navbar HTML
+ const injectNavbar = () => {
+    fetch('navbar.html') // Load the navbar HTML
+      .then(response => response.text())
+      .then(data => {
+        const navbarContainer = document.getElementById('navbarContainer');
+        navbarContainer.innerHTML = data; // Inject the HTML into navbarContainer
 
-    // Function to handle form submission
-    function search() {
-        // Prevent default form submission
-        event.preventDefault();
-  
-        // Get the search input value
-        var searchQuery = document.getElementById("search").value.toLowerCase().trim();
-  
-        // Switch statement to navigate based on search query
-        switch (searchQuery) {
-            case "page":
-                window.location.href = "index.html";
-                break;
-            case "page2":
-                window.location.href = "page2.html";
-                break;
-            case "page3":
-                window.location.href = "page3.html";
-                break;
-            default:
-                // Redirect to a default page or display a message if no match found
-                alert("No matching page found for '" + searchQuery + "'");
-                break;
+        // Additional scripts from navbar.html, if any
+        const scripts = navbarContainer.getElementsByTagName('script');
+        for (let script of scripts) {
+          eval(script.innerText); // Execute any inline scripts in the injected HTML
         }
-    }
-  
-    // Event listener for form submission
-    document.getElementById("searchForm").addEventListener("submit", search);
-  
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  };

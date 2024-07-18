@@ -63,9 +63,9 @@
               </ul>
             </li>
             <!-- Search form -->
-            <form class="search-form d-flex justify-content-center">
+            <form class="searchform d-flex justify-content-center">
               <input class="form-control me-2" type="search" id="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-danger " type="submit">Search</button>
+              <button class="btn btn-outline-danger " onclick="handleSearch()">Search</button>
             </form>
             <!-- Username display -->
             <span id="usernameDisplay" class="text-light ms-5"></span>
@@ -82,9 +82,37 @@
         usernameDisplay.textContent = `Welcome, ${username}`;
       }
     });
-  </script>
-  <script src="custom.js"></script>
 
+
+
+
+   
+  const handleSearch = () => {
+    const searchInput = document.getElementById('search').value.trim().toLowerCase();
+    switch(searchInput) {
+      case 'login':
+        window.location.href = 'loginpage.html';
+        break;
+        case 'kush': // Adjust cases to match actual search keywords
+        window.location.href = 'kush.html'; // Example of where each search term should go
+        break;
+      // Add more cases for other items/pages as needed
+      default:
+        alert('No matching item found.');
+        break;
+    }
+  };
+
+  // Event listener for search form submission
+  const searchForm = document.querySelector('.searchform');
+  searchForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
+    handleSearch(); // Call handleSearch function
+  });
+ </script>
+
+  <script src="custom.js"></script>
+  
   <!-- Bootstrap and MDB JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

@@ -139,11 +139,32 @@
   </footer>
 
   <!-- Load navbar and function bar using JavaScript -->
-  <script src="custom.js"></script>
+
+  <script>
+    // Function to inject the navbar HTML
+    const injectNavbar = () => {
+      fetch('navbar.html') // Load the navbar HTML
+        .then(response => response.text())
+        .then(data => {
+          const navbarContainer = document.getElementById('navbarContainer');
+          navbarContainer.innerHTML = data; // Inject the HTML into navbarContainer
+
+          // Additional scripts from navbar.html, if any
+          const scripts = navbarContainer.getElementsByTagName('script');
+          for (let script of scripts) {
+            eval(script.innerText); // Execute any inline scripts in the injected HTML
+          }
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    };
+
+    // Call injectNavbar function when DOM content is loaded
+    document.addEventListener('DOMContentLoaded', injectNavbar);
+
+ </script>
   <script src="injector.js"></script>
  
-  <!--this file contain the funtionbar function it will not work inside custom.js check it after the implementation-->
-
+ 
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
