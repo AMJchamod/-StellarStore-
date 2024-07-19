@@ -27,7 +27,7 @@
       <div class="row">
         <!-- Card 1 -->
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card" data-id="product1">
             <img src="img/kush.jfif" class="card-img-top" alt="Course Image">
             <div class="card-body">
               <h5 class="card-title">Kush😋</h5>
@@ -36,14 +36,14 @@
               </p>
               <div class="d-flex justify-content-between">
                 <a href="#" class="btn btn-primary">Buy NOW</a>
-                <a href="#" class="btn btn-success">Add to cart</a>
+                <a href="#" class="btn btn-success  add-to-cart">Add to cart</a>
               </div>
             </div>
           </div>
         </div>
         <!-- Card 2 -->
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card"data-id="product2">
             <img src="img/wannacry.jfif" class="card-img-top" alt="Course Image">
             <div class="card-body">
               <h5 class="card-title">WannaCray 😈</h5>
@@ -52,14 +52,14 @@
               </p>
               <div class="d-flex justify-content-between">
                 <a href="#" class="btn btn-primary">Buy NOW</a>
-                <a href="#" class="btn btn-success">Add to cart</a>
+                <a href="#" class="btn btn-success  add-to-cart">Add to cart</a>
               </div>
             </div>
           </div>
         </div>
         <!-- Card 3 -->
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card" data-id="product3">
             <img src="img/pistol.jfif" class="card-img-top" alt="Course Image">
             <div class="card-body">
               <h5 class="card-title">Sarsilmaz P8L Pistol</h5>
@@ -68,7 +68,7 @@
               </p>
               <div class="d-flex justify-content-between">
                 <a href="#" class="btn btn-primary">Buy NOW</a>
-                <a href="#" class="btn btn-success">Add to cart</a>
+                <a href="#" class="btn btn-success  add-to-cart">Add to cart</a>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@
       <div class="row">
         <!-- Card 1 -->
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card" data-id="product4">
             <img src="img/flpperzerowebp.webp" class="card-img-top" alt="Course Image">
             <div class="card-body">
               <h5 class="card-title">Flipper Zero☠</h5>
@@ -88,14 +88,14 @@
               </p>
               <div class="d-flex justify-content-between">
                 <a href="#" class="btn btn-primary">Buy NOW</a>
-                <a href="#" class="btn btn-success">Add to cart</a>
+                <a href="#" class="btn btn-success  add-to-cart">Add to cart</a>
               </div>
             </div>
           </div>
         </div>
         <!-- Card 2 -->
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card" data-id="product5">
             <img src="img/W32-Mimail-A-Cleaner_1.png" class="card-img-top" alt="Course Image">
             <div class="card-body">
               <h5 class="card-title">Mimail 😈</h5>
@@ -104,14 +104,14 @@
               </p>
               <div class="d-flex justify-content-between">
                 <a href="#" class="btn btn-primary">Buy NOW</a>
-                <a href="#" class="btn btn-success">Add to cart</a>
+                <a href="#" class="btn btn-success  add-to-cart">Add to cart</a>
               </div>
             </div>
           </div>
         </div>
         <!-- Card 3 -->
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card" data-id="product6">
             <img src="img/adramx.jfif" class="card-img-top" alt="Course Image">
             <div class="card-body">
               <h5 class="card-title">Ardamax</h5>
@@ -120,7 +120,7 @@
               </p>
               <div class="d-flex justify-content-between">
                 <a href="#" class="btn btn-primary">Buy NOW</a>
-                <a href="#" class="btn btn-success">Add to cart</a>
+                <a href="#" class="btn btn-success  add-to-cart">Add to cart</a>
               </div>
             </div>
           </div>
@@ -142,29 +142,10 @@
 
   <!-- Load navbar and function bar using JavaScript -->
 
-  <script>
-    // Function to inject the navbar HTML
-    const injectNavbar = () => {
-      fetch('navbar.html') // Load the navbar HTML
-        .then(response => response.text())
-        .then(data => {
-          const navbarContainer = document.getElementById('navbarContainer');
-          navbarContainer.innerHTML = data; // Inject the HTML into navbarContainer
-
-          // Additional scripts from navbar.html, if any
-          const scripts = navbarContainer.getElementsByTagName('script');
-          for (let script of scripts) {
-            eval(script.innerText); // Execute any inline scripts in the injected HTML
-          }
-        })
-        .catch(error => console.error('Error loading navbar:', error));
-    };
-
-    // Call injectNavbar function when DOM content is loaded
-    document.addEventListener('DOMContentLoaded', injectNavbar);
-
- </script>
+  
+ <script src="custom.js"></script>
   <script src="injector.js"></script>
+  <script src="main.js"></script>
  
  
 
