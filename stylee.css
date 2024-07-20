@@ -13,6 +13,7 @@
     position: relative;
 }
 
+
 .welcomeoverlayer {
     position: absolute;
     bottom: 20%;
@@ -68,7 +69,9 @@ a {
     background-color:#151515;
 }
 .filternav{
-    top:56px;
-    padding-left: 40%;
+    top:70px;
+    padding-left: 80%;
     background-color: black;
+    color: greenyellow;
+    font-family: serif;
 }

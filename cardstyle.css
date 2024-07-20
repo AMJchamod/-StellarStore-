@@ -1,13 +1,24 @@
 
 body{
-  background-image: url(img/gifimage.gif);
+  background-image: url(img/star-4773_256.gif);
   width:auto;
   background-repeat: none;
-  background-size: cover;
+
 }
 .card {
   transition: transform 0.2s, box-shadow 0.2s;
+  background: transparent;
+   color: green;
+   font-family: serif;
 
+}
+a{
+  color: whitesmoke;
+}
+
+.card-title{
+  color:red;`
+  text-decoration:underline;
 }
 
 .card:hover {
