@@ -3,12 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRy</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <title>Link Preview</title>
+    <style>
+        body {
+            background-color: #050801;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        a.uiverse {
+            position: relative;
+            padding: 25px 30px;
+            background-color: #050801;
+            color: #03e9f4;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            letter-spacing: 4px;
+            overflow: hidden;
+            transition: 0.5s;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a.uiverse:hover {
+            background: #03e9f4;
+            color: #050801;
+            box-shadow: 0 0 5px #03e9f4,
+                        0 0 25px #03e9f4,
+                        0 0 50px #03e9f4,
+                        0 0 200px #03e9f4;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+        }
+
+        .wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 163, 26, 0.7);
+            filter: blur(8px);
+            animation: moveCircle 7s linear infinite;
+        }
+
+        .circle:nth-child(2) {
+            background: #1a23ff;
+            animation-duration: 10s;
+        }
+
+        .circle:nth-child(3) {
+            background: #e21bda;
+            animation-duration: 12s;
+        }
+
+        @keyframes moveCircle {
+            0% { transform: translate(0, 0); }
+            33% { transform: translate(100px, 50px); }
+            66% { transform: translate(50px, 100px); }
+            100% { transform: translate(0, 0); }
+        }
+    </style>
 </head>
 <body>
-    
-    <div id="navbarContainer"></div>
-    <script src="custom.js"></script>
+    <a href="#" class="uiverse">
+        <div class="wrapper">
+            <span>CLICK ME</span>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </a>
 </body>
 </html>

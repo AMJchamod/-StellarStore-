@@ -5,14 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart Page</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: black;
+      color: #39FF14;
+    }
+    .container {
+      margin-top: 5%;
+    }
+    h2 {
+      color: #39FF14;
+      text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14;
+      animation: flicker 1.5s infinite alternate;
+    }
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .card {
+      background-color: #222;
+      border: 1px solid #39FF14;
+      color: #39FF14;
+      margin-bottom: 1rem;
+    }
+    .btn-primary {
+      background-color: #39FF14;
+      border: 1px solid #39FF14;
+      animation: flicker 1.5s infinite alternate;
+    }
+    .btn-primary:hover {
+      background-color: #32CD32;
+    }
+    .binary {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .binary span {
+      position: absolute;
+      color: #39FF14;
+      font-size: 20px;
+      animation: move 5s linear infinite;
+    }
+    @keyframes move {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(100%);
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="container mt-5">
+  <div class="binary">
+    <!-- Generate binary code spans -->
+    <script>
+      for (let i = 0; i < 200; i++) {
+        let span = document.createElement('span');
+        span.innerHTML = Math.random() < 0.5 ? '0' : '1';
+        span.style.left = Math.random() * 100 + 'vw';
+        span.style.animationDelay = Math.random() * 5 + 's';
+        span.style.animationDuration = Math.random() * 5 + 5 + 's';
+        document.querySelector('.binary').appendChild(span);
+      }
+    </script>
+  </div>
+
+  <div class="container">
     <h2>Your Cart</h2>
     <div class="row" id="cartItems">
       <!-- Cart items will be dynamically inserted here -->
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Item Name</h5>
+            <p class="card-text">Item description goes here.</p>
+            <p class="card-text">Price: $XX.XX</p>
+            <button class="btn btn-danger">Remove</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <button type="button" class="btn btn-primary mt-3" id="checkoutButton">Checkout</button>
+    <button type="button" class="btn btn-primary mt-3" id="checkoutButton">Proceed to the Underworld Checkout</button>
   </div>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
