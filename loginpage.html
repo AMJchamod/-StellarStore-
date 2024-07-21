@@ -15,14 +15,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-     
     }
     .container {
       max-width: 400px;
       padding: 2rem;
       border: 1px solid #39FF14;
       border-radius: 10px;
-      background-image: url(img/blacked.gif);
+      background-image: url('img/blacked.gif');
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -67,14 +66,14 @@
   
   <div class="container">
     <h2 class="console">Login</h2>
-    <form id="loginForm">
+    <form id="loginForm" action="validatelogin.php" method="POST">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
-        <input type="text" class="form-control" id="username" required>
+        <input type="text" class="form-control" id="username" name="username" required>
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" required>
+        <input type="password" class="form-control" id="password" name="password" required>
       </div>
       <button type="submit" class="btn btn-primary">Login</button>
     </form>
@@ -83,22 +82,21 @@
     </div>
   </div>
 
-  <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent form submission
+
+     <script>
+  
+
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    
 
       // Get the entered username and password
       const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-
-      // Here you can add additional logic to check the password
-
-      // Store the username in localStorage
+      
+      // Save the username in localStorage
       localStorage.setItem('username', username);
-
-      // Redirect to the navbar page (replace 'home.html' with the actual filename)
-      window.location.href = 'home.html';
-    });
+    
+  });
   </script>
+  
 </body>
 </html>
