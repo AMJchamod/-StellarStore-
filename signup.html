@@ -104,18 +104,18 @@
 
   <div class="container">
     <h2 class="console">Signup</h2>
-    <form id="signupForm">
+    <form id="signupForm" action="signup.php" method="POST">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
-        <input type="text" class="form-control" id="username" required>
+        <input type="text" name="username" class="form-control" id="username" required>
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" required>
+        <input type="password" name="password" class="form-control" id="password" required>
       </div>
       <div class="mb-3">
         <label for="confirmPassword" class="form-label">Confirm Password</label>
-        <input type="password" class="form-control" id="confirmPassword" required>
+        <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" required>
       </div>
       <button type="submit" class="btn btn-primary">Signup</button>
     </form>
@@ -123,42 +123,5 @@
       <p>Already have an account? <a href="login.html">Login here</a></p>
     </div>
   </div>
-
-  <script>
-    document.getElementById('signupForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent form submission
-
-      // Get the entered data
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-      const confirmPassword = document.getElementById('confirmPassword').value;
-
-      // Basic client-side validation
-      if (password !== confirmPassword) {
-        alert('Passwords do not match!');
-        return;
-      }
-
-      // Send an AJAX request to the PHP script for signup
-      fetch('signup.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.status === 'success') {
-          // Redirect to the login page
-          window.location.href = 'login.html';
-        } else {
-          alert(data.message);
-        }
-      })
-      .catch(error => console.error('Error:', error));
-    });
-  </script>
 </body>
 </html>
-    

@@ -17,12 +17,11 @@
       $result=$conn->query($query);
       if($result->num_rows==1){
        
-              header("location:home.html");
-     
+        echo "<script>alert('Signup successful!'); window.location.href='home.html';</script>";
 
 
       }else{
-        header("Location: displaycart.html");
+        echo "<script>alert('Signup fail!'); window.location.href='signup.html';</script>";
          exit();
       }
       $conn->close();

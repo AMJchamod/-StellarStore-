@@ -7,9 +7,10 @@ body{
 }
 .card {
   transition: transform 0.2s, box-shadow 0.2s;
-  background: transparent;
+
    color: green;
    font-family: serif;
+   background: transparent;
 
 }
 a{
@@ -17,8 +18,10 @@ a{
 }
 
 .card-title{
-  color:red;`
+  color:red;
   text-decoration:underline;
+  background: transparent;
+
 }
 
 .card:hover {
@@ -138,4 +141,9 @@ a{
 
 .form-check-inline {
   margin-left: 1rem; /* Add margin between radio buttons */
+}
+
+.hidden{
+
+  
 }

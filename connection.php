@@ -7,7 +7,7 @@ $connection = mysqli_connect('localhost', 'root', '', 'class');
 //mysqli_connect   --->   show what is the error
 //die() --> terminate the script
 if (mysqli_connect_errno()) {
-    die("Connection fail") . mysqli_error();
+    die("Connection fail") .mysqli_error();
 }
 
 

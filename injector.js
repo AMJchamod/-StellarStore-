@@ -4,14 +4,13 @@
 function navigateToPage(filterType) {
     switch (filterType) {
       case 'latest':
-        window.location.href = 'loginpage.html'; // Example page name
+        window.location.href = 'latesthome.html';
         break;
       case 'most-rated':
-        window.location.href = 'most_rated_tools.html'; // Example page name
-        break;
-      // Add more cases for other filters if needed
+        window.location.href = 'mostratedhome.html'; 
+      
       default:
-        // Handle default case or no filter selected
+      
         break;
     }
   }
@@ -28,7 +27,7 @@ function navigateToPage(filterType) {
       filterType = 'most-rated';
     }
     
-    // Navigate to the appropriate page based on filterType
+    // Navigate
     navigateToPage(filterType);
   }
   
