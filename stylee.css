@@ -77,3 +77,85 @@ a {
     color: greenyellow;
     font-family: serif;
 }
+.btn-buy-now {
+  background: linear-gradient(45deg, #00ff99, #ff0066);
+  color: #fff;
+  border: 1px solid #00ff99;
+  font-weight: bold;
+  padding: 10px 20px; /* Medium size padding */
+  text-transform: uppercase;
+ 
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+  font-size: 16px; /* Medium font size */
+}
+
+.btn-buy-now::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(30deg);
+  transition: 0.5s;
+}
+
+.btn-buy-now:hover::before {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.btn-buy-now:hover {
+  background: linear-gradient(45deg, #ff0066, #00ff99);
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 0, 102, 0.7);
+}
+
+/* Hacking-Themed "Add to cart" Button */
+.btn-add-to-cart {
+  background: linear-gradient(45deg, #0099ff, #00cc99);
+  color: #fff;
+  border: 1px solid #0099ff;
+  font-weight: bold;
+  padding: 10px 20px; /* Medium size padding */
+  text-transform: uppercase;
+ 
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+  font-size: 16px; /* Medium font size */
+}
+
+.btn-add-to-cart::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(30deg);
+  transition: 0.5s;
+}
+
+.btn-add-to-cart:hover::before {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.btn-add-to-cart:hover {
+  background: linear-gradient(45deg, #00cc99, #0099ff);
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.7);
+}
