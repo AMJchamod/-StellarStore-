@@ -36,6 +36,7 @@
       position: absolute;
       margin-left: 120px;
       top: 20px;
+      font-family: serif;
       
     }
     
@@ -68,6 +69,7 @@
         </div>
         <div class="offcanvas-body d-flex justify-content-between align-items-center">
           <ul class="navbar-nav d-flex flex-row align-items-center ms-auto">
+            <a href="home.html" class=neon-text>Home</a>
             <li class="nav-item me-3">
               <a class="nav-link active neon-text" aria-current="page" href="displaycart.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
@@ -76,7 +78,7 @@
               </a>
             </li>
             <li class="nav-item dropdown me-3">
-              <a class="nav-link dropdown-toggle neon-text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown--tetoggle neon-text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categories
               </a>
               <ul class="dropdown-menu">
@@ -108,16 +110,12 @@
     const handleSearch = () => {
       const searchInput = document.getElementById('search').value.trim().toLowerCase();
       switch(searchInput) {
-        case 'guns':
-          window.location.href = 'guns.html';
+        case 'login':
+          window.location.href = 'loginpage.html';
           break;
-        case 'drugs': // Adjust cases to match actual search keywords
-          window.location.href = 'drugs.html'; // Example of where each search term should go
+        case 'kush': // Adjust cases to match actual search keywords
+          window.location.href = 'kush.html'; // Example of where each search term should go
           break;
-          case 'tools':
-          window.location.href = 'hackingtool.html';
-          break;
-      
         // Add more cases for other items/pages as needed
         default:
           alert('No matching item found.');

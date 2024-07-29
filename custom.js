@@ -33,24 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inject function bar
   injectHTML('functionbar.html', 'functionContainer');
 
-// Function to handle search
-const handleSearch = () => {
-  const searchInput = document.getElementById('search').value.trim().toLowerCase();
-  
-  // Example switch case for navigation based on search input
-  switch(searchInput) {
-    case 'login':
-      window.location.href = 'loginpage.html';
-      break;
-    case 'item2':
-      window.location.href = 'item2.html';
-      break;
-    // Add more cases for other items/pages as needed
-    default:
-      alert('No matching item found.');
-      break;
-  }
-};
+
 
 // Event listener for search form submission
 const searchForm = document.querySelector('.search-form');
